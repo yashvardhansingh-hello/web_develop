@@ -5,27 +5,25 @@
 
 body {
   display: grid;
-  grid-template-columns: 50vw auto;
+  grid-template-columns: 50vw 50vw;
   grid-template-rows: 8vh 87vh 5vh;
 }
 
 #head {
   background-color: black;
-  grid-column: span 2;
   display: flex;
   align-items: center;
   justify-content: center;
+  grid-column: 1/ span 2;
 }
 
-#left {
-  background-color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 #right {
+  grid-column: 2;
   background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #footer {
@@ -40,11 +38,51 @@ body {
 a {
   text-decoration: none;
   color: white;
-  font-size: 30px;
+  font-size: 3vw;
 }
 
 #left > div {
   min-height: 100px;
   min-width: 100px;
   background-color: green;
+  flex-shrink: 0;
+  transform-origin: 50% 50%;
+  rotate: z 45deg;
+  scale: 3 3;
+  opacity: 0;
 }
+a:hover {
+  font-size: 4vw;
+  transition-property: font-size;
+  transition-duration: 1s;
+}
+
+#left>div:hover {
+  opacity: 1;
+  transition: opacity 4s ease-in-out;
+}
+
+#left {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes loop {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#right > div{
+  min-height: 100px;
+  min-width: 100px;
+  opacity: 0;
+  color: red;
+}
+
+
+
+#right >div:hover{
+  animation: loop 5s ease-in 1s infinite;
+} 
