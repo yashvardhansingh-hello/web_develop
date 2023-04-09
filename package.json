@@ -3,5 +3,26 @@
     "node-fetch": "^3.3.1",
     "unsplash-js": "^7.0.15",
     "webpack": "^5.76.1"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "name": "web_develop",
+  "description": "beginnening",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashvardhansingh-hello/web_develop.git"
+  },
+  "author": "yash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yashvardhansingh-hello/web_develop/issues"
+  },
+  "homepage": "https://github.com/yashvardhansingh-hello/web_develop#readme",
+  "type": "module"
 }
