@@ -14,6 +14,10 @@ app.get('/about', (req, res) => {
     res.send('About!')
 })
 
+app.get('/bike', (req, res) => {
+    res.json({'yash': 34})
+})
+
 app.get('/car', (req, res) => {
     res.sendFile(path.join(__dirname, '../css_practice/index.html'))
 })
